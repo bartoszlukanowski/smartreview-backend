@@ -1,0 +1,9 @@
+{
+  "name": "smartreview-backend",
+  "version": "1.0.0",
+  "description": "SmartReview backend – handles AI analysis and payments",
+  "private": true,
+  "dependencies": {
+    "stripe": "^14.0.0"
+  }
+}
