@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     try {
       const session = await stripe.checkout.sessions.create({
         mode: 'subscription',
-        payment_method_types: ['card', 'p24'],
+        payment_method_types: ['card'],
         line_items: [{ price: process.env.STRIPE_PRICE_MONTHLY, quantity: 1 }],
         success_url: `${process.env.APP_URL}/api/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${process.env.APP_URL}/api/buy`,
